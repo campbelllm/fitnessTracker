@@ -1,7 +1,7 @@
 let mongoose = require("mongoose");
 let db = require("../models");
 
-mongoose.connect("mongodb+srv://campbelllm:Berkeley123@cluster0.6oiwf.mongodb.net/fitnessTracker?retryWrites=true&w=majority", {
+mongoose.connect(process.env.MONGODB_URI, {
 
   useNewUrlParser: true,
   useFindAndModify: false

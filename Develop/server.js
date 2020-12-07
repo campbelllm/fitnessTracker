@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(logger("dev"));
 app.use(express.static("public"));
 
-mongoose.connect('mongodb+srv://campbelllm:Berkeley123@cluster0.6oiwf.mongodb.net/fitnessTracker?retryWrites=true&w=majority', {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
