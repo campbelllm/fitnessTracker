@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(logger("dev"));
 app.use(express.static("public"));
 
-mongoose.connect('mongodb+srv://campbelllm:password@cluster0.6oiwf.mongodb.net/test', {
+mongoose.connect('mongodb+srv://campbelllm:Berkeley123@cluster0.6oiwf.mongodb.net/fitnessTracker?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
@@ -23,11 +23,11 @@ mongoose.connect('mongodb+srv://campbelllm:password@cluster0.6oiwf.mongodb.net/t
 mongoose.set('debug', true);
 
 
-const PORT = process.env.PORT || 3000;
+const PORT =  3000;
 
 app.use(require("./routes/api.js"));
 app.use(require("./routes/view.js"));
-app.use(routes);
+
 app.listen(PORT, () => {
   console.log('Server started listening on PORT http://localhost:3000');
 });
