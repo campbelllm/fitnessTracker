@@ -8,6 +8,7 @@
     "start": "node server.js",
     "watch": "nodemon server.js",
     "seed": "node seeders/seed.js",
+    "build": "cd Develop && npm run build",
     "heroku-postbuild": "cd Develop && npm run build"
   },
   "author": "",
