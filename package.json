@@ -8,8 +8,8 @@
     "start": "node server.js",
     "watch": "nodemon server.js",
     "seed": "node seeders/seed.js",
-   
-    "heroku-postbuild": "npm run build"
+    "build": "npm run build"
+    
   },
   "author": "",
   "license": "ISC",
