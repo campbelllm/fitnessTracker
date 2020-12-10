@@ -23,7 +23,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 mongoose.set('debug', true);
 
 
-const PORT =  3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(require("./routes/api.js"));
 app.use(require("./routes/view.js"));
